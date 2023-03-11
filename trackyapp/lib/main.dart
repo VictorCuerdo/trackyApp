@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'TRACKY-Editar informacion personal',
       home: EditPersonalInfo(),
     );
@@ -13,6 +15,8 @@ class MyApp extends StatelessWidget {
 }
 
 class EditPersonalInfo extends StatefulWidget {
+  const EditPersonalInfo({super.key});
+
   @override
   _EditPersonalInfoState createState() => _EditPersonalInfoState();
 }
@@ -28,45 +32,62 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Edit Personal Information'),
-      ),
       body: SingleChildScrollView(
         child: Container(
           color: Colors.blue,
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(30.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              SizedBox(height: 16.0),
-              Container(
-                alignment: Alignment.topRight,
-                child: Container(
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.white,
+              const SizedBox(height: 20.0),
+              Stack(
+                children: [
+                  Row(
+                    children: const [
+                      Text(
+                        'Tania',
+                        style: TextStyle(
+                          fontSize: 50.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text(
+                        'Barranquilla, Atlantico',
+                        style: TextStyle(fontSize: 14.0),
+                      ),
+                    ],
                   ),
-                  child: IconButton(
-                    icon: Icon(Icons.photo_camera),
-                    color: Colors.blue,
-                    onPressed: () {
-                      // TODO: implement photo upload
-                    },
+                  Positioned(
+                    top: 0,
+                    right: 0,
+                    child: Container(
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white,
+                      ),
+                      child: IconButton(
+                        icon: const Icon(Icons.photo_camera),
+                        color: Colors.blue,
+                        onPressed: () {
+                          // TODO: implement photo upload
+                        },
+                      ),
+                    ),
                   ),
-                ),
+                ],
               ),
-              SizedBox(height: 16.0),
+              const SizedBox(height: 16.0),
               Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(16.0),
                 ),
-                padding: EdgeInsets.all(16.0),
+                padding: const EdgeInsets.all(16.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     TextFormField(
-                      decoration: InputDecoration(labelText: 'Name'),
+                      decoration: const InputDecoration(labelText: 'Name'),
                       initialValue: _name,
                       onChanged: (value) {
                         setState(() {
@@ -74,9 +95,9 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
                         });
                       },
                     ),
-                    SizedBox(height: 16.0),
+                    const SizedBox(height: 16.0),
                     TextFormField(
-                      decoration: InputDecoration(labelText: 'Last Name'),
+                      decoration: const InputDecoration(labelText: 'Last Name'),
                       initialValue: _lastName,
                       onChanged: (value) {
                         setState(() {
@@ -84,9 +105,9 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
                         });
                       },
                     ),
-                    SizedBox(height: 16.0),
+                    const SizedBox(height: 16.0),
                     TextFormField(
-                      decoration: InputDecoration(labelText: 'Email'),
+                      decoration: const InputDecoration(labelText: 'Email'),
                       initialValue: _email,
                       onChanged: (value) {
                         setState(() {
@@ -94,9 +115,9 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
                         });
                       },
                     ),
-                    SizedBox(height: 16.0),
+                    const SizedBox(height: 16.0),
                     TextFormField(
-                      decoration: InputDecoration(labelText: 'Telephone'),
+                      decoration: const InputDecoration(labelText: 'Telephone'),
                       initialValue: _telephone,
                       onChanged: (value) {
                         setState(() {
@@ -104,24 +125,24 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
                         });
                       },
                     ),
-                    SizedBox(height: 16.0),
+                    const SizedBox(height: 16.0),
                     TextFormField(
-                      decoration: InputDecoration(labelText: 'Weight'),
+                      decoration: const InputDecoration(labelText: 'Weight'),
                       initialValue: _weight?.toString(),
                       keyboardType:
-                          TextInputType.numberWithOptions(decimal: true),
+                          const TextInputType.numberWithOptions(decimal: true),
                       onChanged: (value) {
                         setState(() {
                           _weight = double.tryParse(value);
                         });
                       },
                     ),
-                    SizedBox(height: 16.0),
+                    const SizedBox(height: 16.0),
                     TextFormField(
-                      decoration: InputDecoration(labelText: 'Height'),
+                      decoration: const InputDecoration(labelText: 'Height'),
                       initialValue: _height?.toString(),
                       keyboardType:
-                          TextInputType.numberWithOptions(decimal: true),
+                          const TextInputType.numberWithOptions(decimal: true),
                       onChanged: (value) {
                         setState(() {
                           _height = double.tryParse(value);
