@@ -44,16 +44,15 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
                 children: [
                   Row(
                     children: const [
-                      Text(
-                        'Tania',
-                        style: TextStyle(
-                          fontSize: 50.0,
-                          fontWeight: FontWeight.bold,
+                      Padding(
+                        padding: EdgeInsets.only(left: 20.0),
+                        child: Text(
+                          'Tania',
+                          style: TextStyle(
+                            fontSize: 50.0,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                      Text(
-                        'Barranquilla, Atlantico',
-                        style: TextStyle(fontSize: 14.0),
                       ),
                     ],
                   ),
@@ -76,6 +75,19 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
                   ),
                 ],
               ),
+              const SizedBox(height: 10.0),
+              Row(
+                children: const [
+                  Padding(
+                    padding: EdgeInsets.only(left: 20.0),
+                    child: Text(
+                      'Barranquilla, Atlantico',
+                      style: TextStyle(fontSize: 16.0),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 16.0),
               const SizedBox(height: 16.0),
               Container(
                 decoration: BoxDecoration(
