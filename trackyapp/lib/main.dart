@@ -35,66 +35,67 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
       body: SingleChildScrollView(
         child: Container(
           color: Colors.blue,
-          padding: const EdgeInsets.all(30.0),
+          padding: const EdgeInsets.all(
+              35.0), // ajusta los bordes laterale del formulario. Establece que tan ancho es el formulario
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              const SizedBox(height: 20.0),
-              Stack(
-                children: [
-                  Row(
-                    children: const [
-                      Padding(
-                        padding: EdgeInsets.only(left: 20.0),
-                        child: Text(
-                          'Tania',
-                          style: TextStyle(
-                            fontSize: 50.0,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Positioned(
-                    top: 0,
-                    right: 0,
-                    child: Container(
-                      decoration: const BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.white,
-                      ),
-                      child: IconButton(
-                        icon: const Icon(Icons.photo_camera),
-                        color: Colors.blue,
-                        onPressed: () {
-                          // TODO: implement photo upload
-                        },
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 10.0),
+              const SizedBox(height: 30.0),
               Row(
                 children: const [
                   Padding(
-                    padding: EdgeInsets.only(left: 20.0),
+                    padding: EdgeInsets.only(left: 10.0),
                     child: Text(
-                      'Barranquilla, Atlantico',
-                      style: TextStyle(fontSize: 16.0),
+                      'Tania',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 80.0,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: -1.5,
+                      ),
                     ),
                   ),
                 ],
               ),
-              const SizedBox(height: 16.0),
-              const SizedBox(height: 16.0),
+              Row(
+                children: [
+                  const Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 20.0, right: 20),
+                      child: Text(
+                        'Barranquilla, Atlantico',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16.0,
+                          fontStyle: FontStyle.italic,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 130,
+                    height: 130,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.white,
+                    ),
+                    child: IconButton(
+                      icon: const Icon(Icons.photo_camera, size: 70),
+                      color: Colors.blue,
+                      onPressed: () {
+                        // TODO: implement photo upload
+                      },
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 20.0),
               Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(16.0),
                 ),
-                padding: const EdgeInsets.all(16.0),
+                padding: const EdgeInsets.fromLTRB(16.0, 10.0, 16.0, 16.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
