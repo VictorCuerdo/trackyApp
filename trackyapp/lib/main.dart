@@ -36,7 +36,7 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
         children: [
           SingleChildScrollView(
             child: Container(
-              color: Colors.blue,
+              color: const Color.fromARGB(255, 64, 147, 206),
               padding: const EdgeInsets.all(
                   35.0), // ajusta los bordes laterale del formulario. Establece que tan ancho es el formulario
               child: Column(
@@ -60,10 +60,9 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
                       ),
                       IconButton(
                         onPressed: () {},
-                        icon: const Icon(Icons.exit_to_app, size: 40),
+                        icon: const Icon(Icons.logout, size: 40),
                         color: Colors.white,
                         padding: const EdgeInsets.only(top: 5.0, right: 10.0),
-                        // alignment: Alignment.topRight,
                       ),
                     ],
                   ),
@@ -91,7 +90,7 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
                         ),
                         child: IconButton(
                           icon: const Icon(Icons.photo_camera, size: 70),
-                          color: Colors.blue,
+                          color: Color.fromARGB(255, 0, 0, 0),
                           onPressed: () {
                             // TODO: implement photo upload
                           },
@@ -110,7 +109,8 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
                         TextFormField(
-                          decoration: const InputDecoration(labelText: 'Name'),
+                          decoration: const InputDecoration(
+                              labelText: 'Inserte Nombre(s)'),
                           initialValue: _name,
                           onChanged: (value) {
                             setState(() {
@@ -120,8 +120,8 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
                         ),
                         const SizedBox(height: 16.0),
                         TextFormField(
-                          decoration:
-                              const InputDecoration(labelText: 'Last Name'),
+                          decoration: const InputDecoration(
+                              labelText: 'Inserte Apellido(s)'),
                           initialValue: _lastName,
                           onChanged: (value) {
                             setState(() {
@@ -131,7 +131,8 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
                         ),
                         const SizedBox(height: 16.0),
                         TextFormField(
-                          decoration: const InputDecoration(labelText: 'Email'),
+                          decoration:
+                              const InputDecoration(labelText: 'Inserte Email'),
                           initialValue: _email,
                           onChanged: (value) {
                             setState(() {
@@ -141,8 +142,8 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
                         ),
                         const SizedBox(height: 16.0),
                         TextFormField(
-                          decoration:
-                              const InputDecoration(labelText: 'Telephone'),
+                          decoration: const InputDecoration(
+                              labelText: 'Inserte Numero telefono'),
                           initialValue: _telephone,
                           onChanged: (value) {
                             setState(() {
@@ -152,8 +153,8 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
                         ),
                         const SizedBox(height: 16.0),
                         TextFormField(
-                          decoration:
-                              const InputDecoration(labelText: 'Weight'),
+                          decoration: const InputDecoration(
+                              labelText: 'Inserte su peso'),
                           initialValue: _weight?.toString(),
                           keyboardType: const TextInputType.numberWithOptions(
                               decimal: true),
@@ -165,8 +166,8 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
                         ),
                         const SizedBox(height: 16.0),
                         TextFormField(
-                          decoration:
-                              const InputDecoration(labelText: 'Height'),
+                          decoration: const InputDecoration(
+                              labelText: 'Inserte su estatura'),
                           initialValue: _height?.toString(),
                           keyboardType: const TextInputType.numberWithOptions(
                               decimal: true),
@@ -176,6 +177,34 @@ class _EditPersonalInfoState extends State<EditPersonalInfo> {
                             });
                           },
                         ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 40.0),
+                  OutlinedButton(
+                    onPressed: () {},
+                    style: OutlinedButton.styleFrom(
+                      side: const BorderSide(width: 2.0, color: Colors.white),
+                      minimumSize: const Size(double.infinity, 0),
+                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        SizedBox(width: 20.0),
+                        Text(
+                          'Editar Perfil',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 30.0,
+                          ),
+                        ),
+                        SizedBox(width: 20.0),
+                        Icon(
+                          Icons.edit,
+                          color: Colors.white,
+                          size: 30.0,
+                        )
                       ],
                     ),
                   ),
