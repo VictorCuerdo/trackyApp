@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'edit_info.dart';
 import 'user_summary.dart';
+import 'editar_info.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const UserSummaryPage(),
+      home: const EditarInfo(),
     );
   }
 }

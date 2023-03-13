@@ -166,34 +166,39 @@ class _EditInfoState extends State<EditInfo> {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 40.0),
-                  OutlinedButton(
-                    onPressed: () {},
-                    style: OutlinedButton.styleFrom(
-                      side: const BorderSide(width: 2.0, color: Colors.white),
-                      minimumSize: const Size(double.infinity, 0),
-                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        SizedBox(width: 20.0),
-                        Text(
-                          'Editar Perfil',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 30.0,
-                          ),
+
+                  // BOTON DE EDITAR
+                  const SizedBox(height: 45.0),
+                  Row(
+                    children: [
+                      OutlinedButton(
+                        onPressed: () {
+                          // Add your functionality here
+                        },
+                        style: OutlinedButton.styleFrom(
+                            padding: const EdgeInsets.all(10),
+                            side: const BorderSide(
+                                width: 2.0, color: Colors.white)),
+                        child: Row(
+                          children: const [
+                            Text(
+                              'Editar Perfil',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 30.0,
+                              ),
+                            ),
+                            SizedBox(width: 20.0),
+                            Icon(
+                              Icons.edit,
+                              color: Colors.white,
+                              size: 30.0,
+                            ),
+                          ],
                         ),
-                        SizedBox(width: 20.0),
-                        Icon(
-                          Icons.edit,
-                          color: Colors.white,
-                          size: 30.0,
-                        )
-                      ],
-                    ),
-                  ),
+                      ),
+                    ],
+                  )
                 ],
               ),
             ),
