@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const EditarInfo(),
+      home: const UserSummaryPage(),
     );
   }
 }

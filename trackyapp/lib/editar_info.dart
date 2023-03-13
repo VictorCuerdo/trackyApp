@@ -37,7 +37,7 @@ class _EditarInfoState extends State<EditarInfo> {
                           icon: const Icon(Icons.arrow_back_ios_new_outlined,
                               size: 40),
                           color: Colors.white,
-                          padding: const EdgeInsets.only(top: 5.0, left: 1.0),
+                          padding: const EdgeInsets.only(top: 5.0, left: 5.0),
                         ),
                         const SizedBox(height: 20.0, width: 230),
                         IconButton(
