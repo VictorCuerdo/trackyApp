@@ -1,2 +1,2 @@
 # trackyApp
-vistas y funcionalidades tracky branch VictorCuerdo
+UI/UX frontend development of a Tracking Fitness Mobile Application Flutter with Dart
